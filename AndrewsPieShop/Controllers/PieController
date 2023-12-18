@@ -1,0 +1,12 @@
+using Microsoft.AspNetCore.Mvc;
+
+namespace AndrewsPieShop.Controllers
+{
+    public class PieController : Controller
+    {
+        public IActionResult Index()
+        {
+            return View();
+        }
+    }
+}
