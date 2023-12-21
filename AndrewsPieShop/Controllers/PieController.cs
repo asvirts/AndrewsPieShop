@@ -1,4 +1,5 @@
 ﻿using AndrewsPieShop.Models;
+using AndrewsPieShop.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AndrewsPieShop.Controllers
@@ -16,8 +17,8 @@ namespace AndrewsPieShop.Controllers
 
         public IActionResult List()
         {
-            ViewBag.CurrentCategory = "Cheese cakes";
-            return View(_pieRepository.AllPies);
+            PieListViewModel pieListViewModel = new PieListViewModel(_pieRepository.AllPies, "Cheese cakes");
+            return View(pieListViewModel);
         }
 
     }

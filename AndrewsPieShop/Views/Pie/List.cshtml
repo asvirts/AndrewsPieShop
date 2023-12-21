@@ -1,4 +1,4 @@
-﻿@model IEnumerable<AndrewsPieShop.Models.Pie>
+﻿@model AndrewsPieShop.ViewModels.PieListViewModel
 
 <!DOCTYPE html>
 <html>
@@ -11,9 +11,9 @@
     <script src='main.js'></script>
 </head>
 <body>
-    <h1>@ViewBag.CurrentCategory</h1>
+    <h1>@Model.CurrentCategory</h1>
     <ul>
-        @foreach (var pie in Model)
+        @foreach (var pie in Model.Pies)
         {
             <li>@pie.Name - @pie.Price.ToString("c") - @pie.Category.CategoryName</li>
         }
